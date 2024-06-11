@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SnapNext App",
-  description: "SnapChat alternative for programmers built by Next.js",
+  title: "ChatSwap",
+  description: "My app",
 };
 
 // A Layout is shared ui

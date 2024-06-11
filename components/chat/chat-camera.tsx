@@ -27,7 +27,7 @@ const ChatCamera = () => {
 
   return (
     <>
-      <div className="aspect-[9/16] flex flex-col items-center justify-center h-[80%] bg-black rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 border border-sigColorBgBorder mx-auto lg:mx-0">
+      <div className="">
         <div
           className="rounded-full p-8 bg-white-800 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-30 border border-gray-100 cursor-pointer"
           onClick={() => imgRef.current!.click()}
@@ -49,7 +49,7 @@ const ChatCamera = () => {
             onChange={handleFileChange}
           />
         </div>
-        <p className="w-2/3 text-center text-white mt-4 font-semibold">
+        <p className="w- text-center text-white mt-4 font-semibold">
           Send Image.
         </p>
       </div>
