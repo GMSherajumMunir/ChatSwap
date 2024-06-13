@@ -1,19 +1,19 @@
 import NextAuth from "next-auth";
-import GitHub from "next-auth/providers/github";
+// import GitHub from "next-auth/providers/github";
 import { connectToMongoDB } from "./lib/db";
 import User from "./models/userModel";
 import Google from "next-auth/providers/google";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [
-    GitHub({
-      clientId: process.env.AUTH_GITHUB_ID,
-      clientSecret: process.env.AUTH_GITHUB_SECRET,
-    }),
-    // Google({
-    //   clientId: process.env.AUTH_GOOGLE_ID,
-    //   clientSecret: process.env.AUTH_GOOGLE_SECRET,
+    // GitHub({
+    //   clientId: process.env.AUTH_GITHUB_ID,
+    //   clientSecret: process.env.AUTH_GITHUB_SECRET,
     // }),
+    Google({
+      clientId: process.env.AUTH_GOOGLE_ID,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET,
+    }),
   ],
   secret: process.env.AUTH_SECRET,
   callbacks: {
@@ -37,7 +37,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
     },
     async signIn({ account, profile }) {
-      if (account?.provider === "github") {
+      if (account?.provider === "oauth") {
         await connectToMongoDB();
 
         try {
@@ -48,7 +48,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             const newUser = await User.create({
               username: profile?.login,
               email: profile?.email,
-              fullName: profile?.name,
+              fullName: profile?.fullName,
               avatar: profile?.avatar_url,
             });
 
