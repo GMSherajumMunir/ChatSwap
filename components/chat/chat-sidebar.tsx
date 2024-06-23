@@ -6,10 +6,10 @@ import Image from "next/image";
 import { auth } from "@/auth";
 import Chats from "./chats";
 import { Suspense } from "react";
-// import { ChatsSkeleton } from "../skeletons/chats-skeletons";
 // import SearchBar from "./SearchBar";
 import Friends from "./Friends";
-import FriendSkeleton from "./FriendSkeleton";
+import { ChatsSkeleton } from "../skeletons/chats-skeletons";
+// import FriendSkeleton from "./FriendSkeleton";
 
 const ChatSideBar = async () => {
   const session = await auth();
@@ -27,9 +27,9 @@ const ChatSideBar = async () => {
               </>
             )}
           </div>
-          <Button className="bg-sigButton hover:bg-sigButtonHover text-white rounded-full h-8 w-8 relative p-2">
+          {/* <Button className="bg-sigButton hover:bg-sigButtonHover text-white rounded-full h-8 w-8 relative p-2">
             <Image src={"/chat.svg"} fill alt="Chat icon" />
-          </Button>
+          </Button> */}
           <LogoutButton />
         </div>
         <div className="p-4 ">
@@ -45,7 +45,7 @@ const ChatSideBar = async () => {
       </div>
       <div className="p-2 overflow-y-auto">
         {/* <SearchBar /> */}
-        <Suspense fallback={<FriendSkeleton />}>
+        <Suspense fallback={<ChatsSkeleton />}>
           <Chats />
         </Suspense>
       </div>

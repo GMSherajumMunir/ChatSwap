@@ -15,7 +15,7 @@ cloudinary.config({
 
 export async function authAction() {
   try {
-    await signIn("oauth"); // redirect()
+    await signIn("google"); // redirect()
   } catch (error: any) {
     if (error.message === "NEXT_REDIRECT") {
       throw error;

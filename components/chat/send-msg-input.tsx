@@ -30,7 +30,7 @@ const SendMsgInput = () => {
 
   return (
     <div className="flex gap-2 items-center py-1">
-      <div className="cursor-pointer w-10 h-10 rounded-full flex items-center justify-center bg-sigBackgroundSecondaryHover">
+      {/* <div className="cursor-pointer w-10 h-10 rounded-full flex items-center justify-center bg-sigBackgroundSecondaryHover">
         <Image
           src={"/camera.svg"}
           height={0}
@@ -38,7 +38,7 @@ const SendMsgInput = () => {
           style={{ width: "20px", height: "auto" }}
           alt="camera icon"
         />
-      </div>
+      </div> */}
       <form
         onSubmit={handleSendMessage}
         className="flex-1 flex  items-center gap-1 bg-sigBackgroundSecondaryHover rounded-full border   border-sigColorBgBorder"

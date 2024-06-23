@@ -85,14 +85,14 @@ const Chat = ({ chat }: ChatProps) => {
             {messageStatus} - {formattedDate}
           </p>
         </div>
-        <Image
+        {/* <Image
           src={"/camera.svg"}
           height={0}
           width={0}
           style={{ width: "20px", height: "auto" }}
           className="ml-auto hover:scale-95 "
           alt="Camera Icon"
-        />
+        /> */}
       </li>
     </Link>
   );

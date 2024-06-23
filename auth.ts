@@ -37,7 +37,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       }
     },
     async signIn({ account, profile }) {
-      if (account?.provider === "oauth") {
+      if (account?.provider === "google") {
         await connectToMongoDB();
 
         try {
@@ -48,7 +48,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             const newUser = await User.create({
               username: profile?.login,
               email: profile?.email,
-              fullName: profile?.fullName,
+              fullName: profile?.name,
               avatar: profile?.avatar_url,
             });
 
