@@ -1,5 +1,5 @@
 import ChatCamera from "@/components/chat/chat-camera";
-// import Image from "next/image";
+import Image from "next/image";
 
 export default async function ChatRootPage() {
   return (
