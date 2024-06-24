@@ -18,7 +18,7 @@ export default function LoginCard() {
     <>
       <form action={dispatch} className="space-y-4">
         <LoginButton />
-        <Loginbutton />
+        {/* <Loginbutton /> */}
       </form>
       <div className="mt-4 text-center text-[13px]">
         <span>New To ChatSwap? </span>
@@ -49,16 +49,16 @@ function LoginButton() {
     </Button>
   );
 }
-function Loginbutton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button
-      className="w-full flex gap-2"
-      disabled={pending}
-      aria-disabled={pending}
-    >
-      <Image src={"/google.svg"} width={20} height={20} alt="Google logo" /> Log
-      in with Google
-    </Button>
-  );
-}
+// function Loginbutton() {
+//   const { pending } = useFormStatus();
+//   return (
+//     <Button
+//       className="w-full flex gap-2"
+//       disabled={pending}
+//       aria-disabled={pending}
+//     >
+//       <Image src={"/google.svg"} width={20} height={20} alt="Google logo" /> Log
+//       in with Google
+//     </Button>
+//   );
+// }

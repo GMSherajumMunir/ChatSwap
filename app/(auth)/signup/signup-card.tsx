@@ -17,7 +17,7 @@ export default function SignupCard() {
     <>
       <form action={dispatch} className="space-y-4">
         <SignUpButton />
-        <SignupButton />
+        {/* <SignupButton /> */}
       </form>
       <div className="mt-4 text-center text-[13px]">
         <span>Already have an account? </span>
@@ -48,16 +48,16 @@ function SignUpButton() {
     </Button>
   );
 }
-function SignupButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button
-      className="w-full flex gap-2"
-      disabled={pending}
-      aria-disabled={pending}
-    >
-      <Image src={"/google.svg"} width={20} height={20} alt="Google logo" />{" "}
-      Sign up with Google
-    </Button>
-  );
-}
+// function SignupButton() {
+//   const { pending } = useFormStatus();
+//   return (
+//     <Button
+//       className="w-full flex gap-2"
+//       disabled={pending}
+//       aria-disabled={pending}
+//     >
+//       <Image src={"/google.svg"} width={20} height={20} alt="Google logo" />{" "}
+//       Sign up with Google
+//     </Button>
+//   );
+// }
