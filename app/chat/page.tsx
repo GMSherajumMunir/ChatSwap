@@ -1,4 +1,5 @@
 import ChatCamera from "@/components/chat/chat-camera";
+// import Image from "next/image";
 
 export default async function ChatRootPage() {
   return (
@@ -8,7 +9,14 @@ export default async function ChatRootPage() {
 				rounded-3xl w-full h-[96%] flex items-center justify-center px-6"
       >
         <ChatCamera />
-        <div className="hidden lg:block"></div>
+        <div className="hidden lg:block">
+          {/* <Image
+            src={"/snapemoji.png"}
+            width={500}
+            height={600}
+            alt="Snap avatar"
+          /> */}
+        </div>
       </div>
     </main>
   );

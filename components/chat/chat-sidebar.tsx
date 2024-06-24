@@ -6,10 +6,7 @@ import Image from "next/image";
 import { auth } from "@/auth";
 import Chats from "./chats";
 import { Suspense } from "react";
-// import SearchBar from "./SearchBar";
-import Friends from "./Friends";
 import { ChatsSkeleton } from "../skeletons/chats-skeletons";
-// import FriendSkeleton from "./FriendSkeleton";
 
 const ChatSideBar = async () => {
   const session = await auth();
