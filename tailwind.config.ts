@@ -90,7 +90,7 @@ const config = {
       },
       backgroundImage: {
         "hero-pattern": "url('/grainy.png')",
-        chat: "url('/ulala.png')",
+        chat: "url('/bulbuli.png')",
         "auth-layout": "url('/noise.svg')",
       },
     },
