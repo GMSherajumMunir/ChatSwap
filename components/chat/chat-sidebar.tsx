@@ -41,7 +41,6 @@ const ChatSideBar = async () => {
         </div>
       </div>
       <div className="p-2 overflow-y-auto">
-        {/* <SearchBar /> */}
         <Suspense fallback={<ChatsSkeleton />}>
           <Chats />
         </Suspense>
